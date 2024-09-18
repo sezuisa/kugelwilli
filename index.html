@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="background-color: black;">
+    <head>
+        <title>Kugelwilli</title>
+    </head>
+    <body>
+       <video id="kugelwilli" autoplay loop muted width="100%">
+            <source src="kugelwilli.mp4" type="video/mp4">
+        </video>
+        
+        <script>
+            function toggleAudio(video) {
+                video.muted = !video.muted;
+            }
+            
+            function onload() {
+                var video = document.getElementById("kugelwilli");
+                document.onkeydown = function() { toggleAudio(video); };
+                document.onclick = function() { toggleAudio(video); };
+            }
+            
+            window.onload = onload();
+        </script>
+   </body>
+</html>
